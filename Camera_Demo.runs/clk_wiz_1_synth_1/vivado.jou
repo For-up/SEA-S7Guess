@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Jul 30 16:00:07 2020
+# Process ID: 12952
+# Current directory: D:/FPGA/Camera_Demo2/Camera_Demo/Camera_Demo.runs/clk_wiz_1_synth_1
+# Command line: vivado.exe -log clk_wiz_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_1.tcl
+# Log file: D:/FPGA/Camera_Demo2/Camera_Demo/Camera_Demo.runs/clk_wiz_1_synth_1/clk_wiz_1.vds
+# Journal file: D:/FPGA/Camera_Demo2/Camera_Demo/Camera_Demo.runs/clk_wiz_1_synth_1\vivado.jou
+#-----------------------------------------------------------
+source clk_wiz_1.tcl -notrace

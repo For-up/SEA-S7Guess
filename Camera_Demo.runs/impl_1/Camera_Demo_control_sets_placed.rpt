@@ -1,0 +1,121 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Aug  1 16:51:05 2020
+| Host         : LAPTOP-EJ7V6R4H running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Camera_Demo_control_sets_placed.rpt
+| Design       : Camera_Demo
+| Device       : xc7s15
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    46 |
+| Unused register locations in slices containing registers |   167 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            3 |
+|      2 |            2 |
+|      3 |            1 |
+|      4 |            6 |
+|      5 |            5 |
+|      7 |            1 |
+|      8 |            4 |
+|      9 |            1 |
+|     10 |            3 |
+|     11 |            4 |
+|     13 |            1 |
+|    16+ |           15 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             441 |          136 |
+| No           | No                    | Yes                    |             207 |           68 |
+| No           | Yes                   | No                     |              73 |           29 |
+| Yes          | No                    | No                     |             148 |           45 |
+| Yes          | No                    | Yes                    |              54 |           14 |
+| Yes          | Yes                   | No                     |             126 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+|                      Clock Signal                      |                                 Enable Signal                                |                                    Set/Reset Signal                                    | Slice Load Count | Bel Load Count |
++--------------------------------------------------------+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+|  clk_10/inst/clk_out1                                  | u_UART_TOP/u_uart_send/uart_txd_i_1_n_0                                      | u_UART_TOP/u_uart_recv/i_rst                                                           |                1 |              1 |
+|  clk_10/inst/clk_out1                                  | MIPI_Camera_IIC/iic_sda_o_i_1_n_0                                            | u_UART_TOP/u_uart_recv/i_rst                                                           |                1 |              1 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/pclk |                                                                              |                                                                                        |                1 |              1 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/LockLostReset/aRst_int_0                |                1 |              2 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
+|  u_D_Uart/clk_10HZ_reg_n_0_[0]                         |                                                                              | u_UART_TOP/u_uart_recv/i_rst                                                           |                2 |              3 |
+|  u_D_Uart/clk_10HZ_reg_n_0_[0]                         | u_D_Uart/out_data[5]_i_1_n_0                                                 |                                                                                        |                1 |              4 |
+|  u_D_Uart/clk_10HZ_reg_n_0_[0]                         | u_D_Uart/out_data[5]_i_1_n_0                                                 | u_D_Uart/out_data[7]_i_1_n_0                                                           |                1 |              4 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/vid_active_video_o0                     | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/unpack_cnt                                        |                1 |              4 |
+|  clk_10/inst/clk_out1                                  | u_UART_TOP/u_uart_send/tx_cnt[3]_i_1_n_0                                     | u_UART_TOP/u_uart_recv/i_rst                                                           |                1 |              4 |
+|  clk_10/inst/clk_out1                                  | u_UART_TOP/u_uart_recv/rx_cnt[3]_i_1_n_0                                     | u_UART_TOP/u_uart_recv/i_rst                                                           |                1 |              4 |
+|  clk_10/inst/clk_out1                                  | u_D_Uart/count[4]_i_1_n_0                                                    | u_UART_TOP/u_uart_recv/i_rst                                                           |                1 |              5 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/curr_delay                  |                                                                                        |                2 |              5 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/sum_dly                     |                                                                                        |                2 |              5 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/end_dly_0                   |                                                                                        |                2 |              5 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/start_dly_1                 |                                                                                        |                1 |              5 |
+|  clk_10/inst/clk_out1                                  | MIPI_Camera_Driver/initial_cnt[6]_i_1_n_0                                    | MIPI_Camera_Driver/OV5647/i_rst                                                        |                2 |              7 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/packet_size[15]                 |                                                                                        |                2 |              8 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/data_shift[1]_0             |                                                                                        |                5 |              8 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/to_cnt[1]_1                 | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/p_5_out[1]                            |                2 |              8 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/to_cnt[0]_2                 | MIPI_Trans_Driver/Data_To_Csi/U0/lane_align_inst/p_5_out[0]                            |                2 |              8 |
+|  clk_10/inst/clk_out1                                  | u_UART_TOP/u_uart_send/tx_data[7]_i_1_n_0                                    | u_UART_TOP/u_uart_recv/i_rst                                                           |                2 |              9 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1__1_n_0              |                3 |             10 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/vdata                                   | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/vdata[9]_i_1_n_0                                  |                2 |             10 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/axis_tvalid_i_reg_n_0_[0]               | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/flg_down_valid                                    |                3 |             10 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/flg_rise_frame                                    |                3 |             11 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/vid_active_video_o0                     | MIPI_Trans_Driver/Driver_Csi_To_Dvp0/addrb_0                                           |                3 |             11 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/sel                                   | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/addr_bram[10]_i_1_n_0                           |                3 |             11 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/E[0]                                  | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/SR[0]                                           |                2 |             11 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/wait_cnt                    | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.wait_cnt[12]_i_1_n_0          |                3 |             13 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/transfer_cnt[15]_i_2_n_0        | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/transfer_cnt[15]_i_1_n_0                  |                4 |             16 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_To_Csi/U0/parser_inst/packet_size[7]                  |                                                                                        |                5 |             16 |
+| ~MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  |                                                                              |                                                                                        |                4 |             17 |
+|  clk_10/inst/clk_out2                                  |                                                                              |                                                                                        |                9 |             18 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_val[0]_i_1_n_0  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0           |                5 |             20 |
+|  clk_10/inst/clk_out2                                  | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0 |                                                                                        |                5 |             20 |
+|  clk_10/inst/clk_out2                                  |                                                                              | MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0           |                6 |             20 |
+|  clk_10/inst/clk_out1                                  | MIPI_Camera_Driver/flg_data_ok                                               | MIPI_Camera_Driver/OV5647/i_rst                                                        |                5 |             23 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          | MIPI_Trans_Driver/Driver_Bayer_To_RGB0/rgb_data_g[9]_i_1_n_0                 |                                                                                        |                6 |             24 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              | Mini_HDMI_Driver/U0/DataEncoders[0].DataEncoder/SR[0]                                  |               17 |             32 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  | MIPI_Trans_Driver/Data_Read/U0/dl0_rxvalidhs                                 |                                                                                        |               14 |             48 |
+|  clk_10/inst/clk_out1                                  |                                                                              | u_UART_TOP/u_uart_recv/i_rst                                                           |               30 |             78 |
+|  clk_10/inst/clk_out1                                  |                                                                              | MIPI_Camera_Driver/OV5647/i_rst                                                        |               33 |            118 |
+|  MIPI_Trans_Driver/Data_Read/U0/clock_system_inst/CLK  |                                                                              |                                                                                        |               42 |            140 |
+|  MIPI_Trans_Driver/camera_clock/inst/clk_out1          |                                                                              |                                                                                        |               80 |            298 |
++--------------------------------------------------------+------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+
+

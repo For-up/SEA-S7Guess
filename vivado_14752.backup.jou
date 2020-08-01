@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Jul 31 16:03:00 2020
+# Process ID: 14752
+# Current directory: D:/FPGA/Camera_Demo2/Camera_Demo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8872 D:\FPGA\Camera_Demo2\Camera_Demo\Camera_Demo.xpr
+# Log file: D:/FPGA/Camera_Demo2/Camera_Demo/vivado.log
+# Journal file: D:/FPGA/Camera_Demo2/Camera_Demo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/Camera_Demo2/Camera_Demo/Camera_Demo.xpr
+update_compile_order -fileset sources_1
